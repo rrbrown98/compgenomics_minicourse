@@ -23,7 +23,7 @@ fast5s=$GROUP_SCRATCH/biochem_minicourse_2021/shared/class_dat/sampleX
 
 #Call guppy_basecaller & point to your fast5 files in the shared folder. 
 
-Guppy takes an input_path, save_path, and config as inputs. Input_path is the directory where your fast5 files are located (in shared/class_dat/sampleX). Save_path is the directory where guppy will output the resulting fastq files. Config refers to the specific settings we input into guppy. We don't need to change any of these settings to we'll leave that as is.
+Guppy takes an input_path, save_path, and config as inputs. Input_path is the directory where your fast5 files are located (in shared/class_dat/sampleX). Save_path is the directory where guppy will output the resulting fastq files. Config refers to the specific settings we input into guppy. We don't need to change any of these settings so we'll leave that as is.
 
 /home/groups/astraigh/software/ont-guppy-cpu/bin/guppy_basecaller --input_path $fast5s --save_path "$GROUP_SCRATCH/biochem_minicourse_2021/$me/data/sampleX/basecalled" --config /home/groups/astraigh/software/ont-guppy-cpu/data/dna_r9.4.1_450bps_fast.cfg --num_callers 2
 
@@ -73,7 +73,7 @@ Let's look at the first 10 reads first
 head -n 20 raw/SRR15225353.fasta >raw/SRR15225353.head.fasta
 ```
 
-We have multipe databases installed on sherlock, which correspond to some of those available on ncbi blast online. Here, because we know we what type of samples we are dealing with we have downloaded just a few databases and combined them into one blastdb. The path of this database is  
+We have multipe genome databases installed on sherlock, which correspond to some of those available on ncbi blast online. Here, because we know we what type of samples we are dealing with we have downloaded just a few genome databases and combined them into one blastdb. The path of this database is  
 ```
 /scratch/groups/astraigh/biochem_minicourse_2021/shared/blastdb
 ```
